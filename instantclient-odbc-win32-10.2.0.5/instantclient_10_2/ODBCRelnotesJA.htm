@@ -1,0 +1,1395 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<title> Oracle ODBC Driver 9</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:LastAuthor>mishikaw</o:LastAuthor>
+  <o:Revision>4</o:Revision>
+  <o:TotalTime>67</o:TotalTime>
+  <o:Created>2003-03-20T01:58:00Z</o:Created>
+  <o:LastSaved>2003-03-20T02:06:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>1203</o:Words>
+  <o:Characters>6859</o:Characters>
+  <o:Company>Oracle Corporation</o:Company>
+  <o:Lines>57</o:Lines>
+  <o:Paragraphs>13</o:Paragraphs>
+  <o:CharactersWithSpaces>8423</o:CharactersWithSpaces>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>125</w:Zoom>
+  <w:DoNotShowRevisions/>
+  <w:DoNotPrintRevisions/>
+  <w:HyphenationZone>0</w:HyphenationZone>
+  <w:DoNotHyphenateCaps/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>6 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:DoNotShadeFormData/>
+  <w:Compatibility>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:UsePrinterMetrics/>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:AutoSpaceLikeWord95/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseFELayout/>
+   <w:UseWord97LineBreakingRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:DoNotShowMarkup/>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+@page
+	{mso-footnote-position:end-of-section;}
+div.SECTION1
+	{mso-footnote-position:end-of-section;}
+span.SPELLE
+	{mso-spl-e:yes;}
+span.GRAME
+	{mso-gram-e:yes;}
+ /* Font Definitions */
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"ＭＳ 明朝"; margin-left:0mm; margin-right:0mm; margin-top:0mm}
+ /* Page Definitions */
+@page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;
+	mso-endnote-position:end-of-section;
+	mso-endnote-numbering-style:arabic;
+	mso-endnote-numbering-start:0;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:-2;
+	mso-list-type:simple;
+	mso-list-template-ids:-1788176612;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:*;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0mm;
+	text-indent:0mm;}
+@list l1
+	{mso-list-id:1625581001;
+	mso-list-type:hybrid;
+	mso-list-template-ids:845829650 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level1 lfo2
+	{mso-level-numbering:continue;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:0mm;
+	mso-level-legacy-space:0mm;
+	margin-left:0mm;
+	text-indent:0mm;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="Street"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="PostalCode"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="State"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="address"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="country-region"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="place"/>
+</head>
+
+<body lang=JA style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><span
+style="mso-spacerun:
+yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b style='mso-bidi-font-weight:normal'><span style="mso-spacerun:
+yes">&nbsp;</span></b></span><span
+lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><b style='mso-bidi-font-weight:normal'>Oracle ODBC 
+Driver </b><b style='mso-bidi-font-weight: normal; font-size: 12.0pt; mso-bidi-font-size: 10.0pt'>10</b><b style='mso-bidi-font-weight:normal'>.</b><b style='mso-bidi-font-weight: normal; font-size: 12.0pt; mso-bidi-font-size: 10.0pt'>1</b><b style='mso-bidi-font-weight:normal'>.0.</b></span><b style='mso-bidi-font-weight: normal; font-size: 12.0pt; mso-bidi-font-size: 10.0pt'><span style='font-size: 12.0pt; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal'>2</span></b><span
+lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><b style='mso-bidi-font-weight:normal'>.0</b></span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>説明</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Oracle ODBC Driver</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>は、</span><span lang=EN-US>Microsoft ODBC</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>（</span><span lang=EN-US>Open Database Connectivity</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>）</span><span lang=EN-US>API</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>を実装する</span><span
+lang=EN-US> Microsoft Windows XP</span><span style='font-family:"ＭＳ 明朝"; 
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>、</span><span
+lang=EN-US>Windows 2000</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>、</span><span
+lang=EN-US>Windows NT</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>および</span><span
+lang=EN-US>Windows 98</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>アプリケーションから</span><span
+lang=EN-US> Oracle</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>データベースへの読込みおよび書込みを可能にします。</span></p>
+
+<p class=MsoNormal><span lang=EN-US><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>ODBC</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>対応のアプリケーションを使用するには、</span><span
+lang=EN-US>Oracle ODBC Driver </span><span style='font-family:"ＭＳ 明朝"; 
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>の他に、次のソフトウェアが必要です。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>Oracle Net</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>リリース</span><span lang=EN-US>10.1.0.2.0</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>クライアント側のネットワーク・トランスポート</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>Oracle Server</span> 
+ </li>
+</ul>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>新機能</span><span lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span lang=EN-US>ODBC 10.1.0.</span>2<span lang=EN-US>.0</span></b><b style='mso-bidi-font-weight:normal'><span lang=EN-US><o:p></o:p></span></b></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'>
+ <span　style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>
+ パラメータ・マーカーを持つINSERT/UPDATE文のNCHAR列のサポートを追加しました。<br>
+ 以前のドライバは列がNCHAR型であることを認識できませんでした。そのため、OCIレベルでのバインディング時に適切な属性を設定できませんでした。 
+ また、NCHAR列のサポートを追加したことにより、SQLDescribeParamコールはINSERT/UPDATE文内のパラメータ情報を返すことが可能となりました(その他の種類 
+ の文では返すことができません)。</li>
+</ul>
+
+<p class=MsoNormal style='margin-left:18.0pt'>　</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span lang=EN-US>ODBC 
+9.2.0.4.0</span></b><b style='mso-bidi-font-weight:normal'><span lang=EN-US><o:p></o:p></span></b></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>フェイルオーバー・イベント通知を受け取るための、コールバック・ルーチンを登録する機能を追加しました。</span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'>
+ <span　style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>
+ 　Microsoft Transaction Server (MTS) データソース構成オプションのデフォルト値を「MTS無効」に変更しました。データソース構成フォーム内のこのオプションに対するチェックボックスはデフォルトでチェックされています。MTSサポートを有効にすると、 
+ たとえMTSを使用していなくてもデータベース・リンクと接続フェイルオーバーで問題が発生します。このデフォルト値を無効とすることで、問題の発生が減少します。この変更はODBCドライバのオンライン・ヘルプには反映されていません。 
+ ヘルプは次リリースで修正されます。</li>
+</ul>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>ODBC 9.2.0.3.0<o:p></o:p></span></b></p> 
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>SQLDescribeParam</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>サポートを無効にするデータソース構成オプションを追加しました。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>SQL</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>文内の無効な制御文字は、</span><span
+lang=EN-US>Oracle</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>データベースに渡される前に</span><span
+lang=EN-US>ODBC</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>ドライバによって常に削除されます。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>オンライン・ヘルプを</span><span
+lang=EN-US>HTML</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>ベースに変更しました。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'>
+  <span　style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>
+ ドライバのデフォルトの動作をSQL文から無効な制御文字を取り除くよう変更しました。oraodbc.iniファイルに存在していたRemoveControlCharsオプション 
+ を削除しました。このオプションは不要です。<br>
+  　</li>
+</ul>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>ODBC 9.2.0.2.0<o:p></o:p></span></b></p> 
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>データ・フェッチの性能を向上させるため、インターナル・プリフェッチ・キャッシュを実装しました。特に、一度に一行をフェッチするアプリケーションに有効です。キャッシュ・サイズはデータソース構成のオプションです。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>「プリフェッチ数」データソース構成オプションを「フェッチ・バッファ・サイズ」に変更しました。「フェッチ・バッファ・サイズ」オプションは、インターナル・プリフェッチ・キャッシュのサイズを指定します。デフォルトは、</span><span
+lang=EN-US>64,000</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>バイトです。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>データソース構成オプションに、「数値の設定」を追加しました。このオプションでは、文字列としてバインドされた数値データの受け渡しで、どの数値設定を使用するか指定します。このオプションでは、以下の設定を選択します。</span><span
+lang=EN-US><br>
+</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>・</span><span lang=EN-US>Oracle</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>の</span><span lang=EN-US>NLS</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>設定（デフォルトの設定）</span><span
+lang=EN-US><br>
+</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>・</span><span lang=EN-US>Microsoft</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>の地域設定（</span><span lang=EN-US>Oracle OLE DB</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>ドライバの動作と合わせ相互運用性を向上）</span><span lang=EN-US><br>
+</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>・</span><span lang=EN-US>US</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>設定（英語環境以外で</span><span lang=EN-US>MS Access</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>または</span><span lang=EN-US>DAO</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>を使用する際に必要です）</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>SQL TIMESTAMP</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>データ・タイプのサポートを追加しました。このサポートは、</span><span lang=EN-US>Oracle 
+9.0.1</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>以上のクライアントおよび</span><span lang=EN-US>Oracle 
+9.0.1</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>以上のサーバーのみです。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>無効な制御文字が常に</span><span
+lang=EN-US>SQL</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>文から削除されるようドライバのデフォルトの動作を変更しました。</span><span
+lang=EN-US>oraodbc.ini</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>ファイルの</span><span
+lang=EN-US>RemoveControlChars</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>オプションは不要なため、無効になりました。</span>
+ </li>
+</ul>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>ODBC 9.0.1.3.0<o:p></o:p></span></b></p> 
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>次の接続構文が使用できます。</span><span
+lang=EN-US><br>
+<span style="mso-spacerun: yes">&nbsp; </span>&lt;username&gt;/&lt;password&gt; 
+as sysdba<br> 
+<span style="mso-spacerun: yes">&nbsp; </span>&lt;username&gt;/&lt;password&gt; 
+as sysoper</span> 
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>また、</span><span
+lang=EN-US>&quot;as sysdba&quot;</span><span style='font-family:"ＭＳ 明朝"; 
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>および</span><span
+lang=EN-US>&quot;as sysoper&quot;</span><span style='font-family:"ＭＳ 明朝"; 
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>の部分は、パスワード・フィールドに含めることもできます。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>ステートメント属性</span><span
+lang=EN-US>SQL_ATTR_RETRIEVE_DATA</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>が使用できます。</span>
+ </li>
+</ul>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>ODBC 9.0.1.2.0<o:p></o:p></span></b></p> 
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>ログオン時のユーザー名に</span><span
+lang=EN-US> &lt;username&gt;/&lt;password&gt; </span><span style='font-family: 
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>構文が使用できます。</span>
+ </li>
+</ul>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>ODBC 8.1.7.4.0<o:p></o:p></span></b></p> 
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>ODBC
+</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:bold'>ドライバは、</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>Oracle 8.1.6 </span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>以降のデータベースに接続する際、</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> SQLGetInfo</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>コールの</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>SQL_SQL92_VALUE_EXPRESSIONS</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>に対して</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>SQL_SVE_CASE </span><span style='font-family: 
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>を戻します。</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'><o:p></o:p></span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>BOOKMARK</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>および</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>SQLBulkOperations</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>ルーチンによる、フェッチおよび位置サポートを追加しました。これにより</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>ADO</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>の</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'>Recordcount</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'>プロパティは、</span><span lang=EN-US style='mso-bidi-font-weight:bold'>-1</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>の代わりに結果セットのレコード数を戻すようになります。</span><span
+style='mso-bidi-font-weight:bold'> <span lang=EN-US><o:p></o:p></span></span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>&quot;SQL_WCHAR 
+</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:bold'>強制サポート</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>&quot;</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>が使用可能にされると、</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>SQLColumns</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>および</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>SQLProcedureColumns</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>関数は文字列カラムを、</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>SQL_WCHAR</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>、</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>SQL_WVARCHAR </span><span style='font-family: 
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>または</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'> SQL_WLONGVARCHAR </span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'>で戻します。</span><span lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span>
+ </li>
+</ul>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>ODBC 8.1.7.3.0<o:p></o:p></span></b></p> 
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>構成画面に接続およびステートメント属性</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'> SQL_ATTR_METADATA_ID </span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'>のデフォルト値を追加しました。通常、デフォルトは</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'>SQL_FALSE</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'>です。このデータソース・オプションがチェックされると、接続時のデフォルトが</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>SQL_TRUE</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>に設定されます。これらの値は</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>ODBC</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>仕様にリストされています。明確に接続後に属性値を変更するアプリケーションでは、このオプションにより影響を受けることなくコールは期待通りに終了します。このオプションは、「</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>ODBC Oracle</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>ドライバ構成」ダイアログ・ボックス画面の</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>Workarounds</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>タブ内「</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>METADATA ID</span><span style='font-family: 
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>デフォルトに</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'>SQL_TRUE</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'>をセット」で設定します。</span><span lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>SQLGetData</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>拡張の</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'> SQL_GD_ANY_COLUMN</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>、</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>SQL_GD_ANY_ORDER </span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>および</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'> SQL_GD_BOUND </span><span style='font-family: 
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>サポートを利用するためのオプションが構成画面に追加されました。このオプションを使用すると、構成画面で</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>&quot;LONG</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>列の強制取り出し</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>&quot;</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>オプションが選択されていない場合でも、</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>&quot;LONG</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>列の強制取り出し</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'>&quot;</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:bold'>が有効になります。</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>&quot;LONG</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>列の強制取り出し</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>&quot;</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>オプションに起因する動作は</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>SQLGetData</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>拡張オプションにも当てはまります。</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p></o:p></span>
+ </li>
+</ul>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>ODBC 8.1.7.2.0<o:p></o:p></span></b></p> 
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>ODBC</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>のインストールは複数</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>Oracle</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>ホームがサポートされます。</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>ODBC</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>ドライバーは、インストールされる</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>Oracle</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>ホーム名により一意に識別されます。たとえば、</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>&quot;OraHome81&quot; </span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>という</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>Oracle</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>ホームにインストールされる</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>ODBC</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>ドライバ名は、</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'>&quot;Oracle in OraHome81&quot;</span><span style='font-family:"ＭＳ 明朝"; 
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>になります。</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'>ODBC</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:bold'>ドライバは、以前は常に</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> &quot;Oracle ODBC Driver&quot; </span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>としてインストールされていました。インストールされた</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>ODBC</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>ドライバの一覧は、</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'>ODBC </span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman"; 
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:bold'>データソースアドミニストレータ</span><span
+style='mso-bidi-font-weight:bold'> </span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>ユーティリティの</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'> &quot;</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'>ドライバ</span><span lang=EN-US style='mso-bidi-font-weight:bold'>&quot; </span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>タブで参照できます。既存の</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>Oracle8.1.7</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>ホームで</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>ODBC 8.1.7.2.0</span><span style='font-family: 
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>ドライバにアップデートする場合、既存の</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>Oracle ODBC</span><span style='font-family: 
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>ドライバのデータソース定義は、新しくインストールするドライバ名に変更されます。</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>Oracle8 
+ODBC</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:bold'>ドライバ構成画面に「接続テスト」ボタンを追加しました。これにより、以前の</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>ODBC</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>ドライバに付随していた</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'> &quot;ODBC Test Utility&quot; </span><span style='font-family:"ＭＳ 明朝"; 
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>は、提供されなくなりました。</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p></o:p></span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>SQL_ATTR_METADATA_ID</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>属性のサポートを追加しました。この属性は</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>ODBC3.0</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>の機能で、</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>ODBC</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>カタログ関数の引数の大小文字の扱いを指定するのに使用されます。例えば、</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>SQL_ATTR_METADATA_ID</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>が</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>SQL_TRUE </span><span style='font-family: 
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>に設定された場合、</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'>SQLTables</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'>関数の</span><span lang=EN-US style='mso-bidi-font-weight:bold'>TableName</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>引数では、大小文字は同一に扱われます。</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'><br>
+Microsoft ODBC </span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'>仕様のデフォルト値は、</span><span lang=EN-US style='mso-bidi-font-weight:bold'>SQL_FALSE</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>です（大小文字が区別されます）。</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>SQL_ATTR_METADATA_ID</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>がサポートされる以前は、二重引用符で括られていない場合、すべてのカタログ関数の引数で、大小文字の区別が行われていませんでした。大小文字を区別しないデータベースに格納されているオブジェクトに対して大小文字を区別する引数を使用している既存のアプリケーションは修正が必要な場合があります。たとえば、</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>&quot;{call proc1(?)}&quot; </span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>関数コールを使用する場合、</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>'proc1'</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>が</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>'PROC1'</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>としてデータベースに格納されている場合でも以前は正常に動作していました。現在は、</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>'proc1'</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>として格納されているか</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>SQL_ATTR_METADATA_ID </span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>に</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>SQL_TRUE</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>をセットしてある場合、同様に関数が正常にコールされます。</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p></o:p></span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>SQL_DBMS_NAME</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>の</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'>SQLGetInfo</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>リターン値を</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'> &quot;Oracle&quot; </span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'>に変更しました。以前は</span><span lang=EN-US style='mso-bidi-font-weight:bold'>
+&quot;Oracle8&quot; </span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'>がリターンされていました。</span><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US><o:p></o:p></span></b>
+ </li>
+</ul>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>ODBC 8.1.7.1.0<o:p></o:p></span></b></p> 
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>ODBC </span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>データソース構成インターフェースを再編成しました。システム上の</span><span
+lang=EN-US> tnsname.ora </span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>の</span><span
+lang=EN-US>TNS</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>名検索を統合しました。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>Microsoft EXEC</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>構文サポートの追加。この機能が有効な場合、</span><span lang=EN-US>Oracle8</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>データベース・サーバーによって処理される前に</span><span lang=EN-US>EXEC</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>文で使用されるプロシージャ</span><span lang=EN-US>(</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>または、ファンクション</span><span lang=EN-US>)</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>コールは、その同等な</span><span lang=EN-US>Oracle </span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>プロシージャ</span><span lang=EN-US>(</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>または、ファンクション</span><span lang=EN-US>)</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>コールに解釈されます。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>Microsoft EXEC</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>構文サポートを有効または無効にするためのデータソース構成オプションの追加。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>Batch Autocommit</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>モード用データソース構成オプションの追加。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>Oracle8 ODBC</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>ドライバーのエラー発生時のデフォルト動作は、トランザクションをロールバックします。</span><span
+lang=EN-US>Oracle7 ODBC</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>ドライバーのデフォルト動作は、エラー発生個所までのトランザクションをコミットします。</span><span
+lang=EN-US><br>
+</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>このオプションは、</span><span lang=EN-US>Oracle7 
+ODBC</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>ドライバーとの互換性のため、データソースを構成することができるよう追加されました。エラー無しの行を全てコミットするオプションが追加されましたが</span><span
+lang=EN-US> Oracle8i Client </span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>でのみ利用可能です。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>SQLDescribeCol<span
+style="mso-spacerun: yes">&nbsp; </span></span><span style='font-family:"ＭＳ 明朝"; 
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>で</span><span
+lang=EN-US> SQL_CHAR</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>列</span> <span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>を</span><span lang=EN-US> 'SQL_WCHAR'</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>、</span><span lang=EN-US>SQL_VARCHAR</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>列を</span><span lang=EN-US> 'SQL_WVARCHAR'<span 
+style="mso-spacerun: yes">&nbsp; </span></span><span style='font-family:"ＭＳ 明朝"; 
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>および</span><span
+lang=EN-US> SQL_LONGVARCHAR</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>列</span> <span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>を</span><span lang=EN-US>'SQL_WLONGVARCHAR'<span
+style="mso-spacerun: yes">&nbsp; </span></span><span style='font-family:"ＭＳ 明朝"; 
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>データ型で返すデータソース構成オプションの追加。このオプションを有効にすると</span><span
+lang=EN-US> UNICODE ADO</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>アプリケーションが可能になります。</span><span
+lang=EN-US>ADO</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>アプリケーションは、結果列をバインドする方法を決定するために</span><span
+lang=EN-US> SQLDescribeCol </span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>のリターン値を利用します。データベースは、</span><span
+lang=EN-US>UNICODE</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>型として列を定義する事をサポートしていないため、現在の</span><span
+lang=EN-US> Oracle ODBC</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>ドライバーは</span><span
+lang=EN-US> 'SQL_W' </span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>データ型を返しません。</span> <span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>デフォルトでは、</span><span lang=EN-US>WCHAR </span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>への変換サポートは無効になっています。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>カタログ関数の</span><span
+lang=EN-US>SQLColumns</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>、</span><span
+lang=EN-US>SQLPrimaryKeys</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>および</span><span
+lang=EN-US>SQLTablePrivileges</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>の性能を向上させました。</span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US><o:p></o:p></span></b>
+ </li>
+</ul>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>ODBC 8.1.5.5.0<o:p></o:p></span></b></p> 
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>Oracle8 ODBC Driver</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>の</span><span lang=EN-US>Microsoft ODBC</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>準拠レベルは</span><span lang=EN-US>3.51</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>になりました。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>Oracle8 ODBC Driver</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>は</span><span lang=EN-US>UNICODE</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>をサポートします。</span><span lang=EN-US>UNICODE</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>サポートは、</span><span lang=EN-US>OCI</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>（</span><span lang=EN-US>Oracle</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>コール・インタフェース）によって使用可能となる</span><span lang=EN-US>UNICODE</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>機能に依存しています。</span><span lang=EN-US>OCI 8.1</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>によって、</span><span lang=EN-US>SQLBindParameter</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>による</span><span lang=EN-US>UNICODE</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>データのデータベースへの入力と、</span><span lang=EN-US>SQLBindCol</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>もしくは</span><span lang=EN-US>SQLGetData</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>での</span><span lang=EN-US>UNICODE</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>データのデータベースからの取得がサポートされます。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>Microsoft Transaction Server (MTS) </span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>サポートを無効にするためのデータソース構成オプションが追加されました。デフォルトでは</span><span
+lang=EN-US>MTS</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>サポートは有効です。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>ユーザーが期限切れのパスワードでデータベースに接続しようとすると、</span><span
+lang=EN-US>ODBC</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>ドライバはパスワード変更を要求し、パスワードが変更されてからデータベースに接続します。</span><span
+lang=EN-US>SQL_DRIVER_NOPROMPT</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>パラメータを指定して</span><span
+lang=EN-US>SQLDriverConnect</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>で接続を試みると、ドライバーはパスワード変更を要求せず、かわりにパスワードが期限切れになったというエラーを表示して、接続試行を終了します。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>Microsoft</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>の</span><span lang=EN-US>ODBC</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>用再配布可能コンポーネントは、</span><span
+lang=EN-US>Oracle ODBC Driver</span><span style='font-family:"ＭＳ 明朝"; 
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>インストール時にはインストールされなくなります。再配布可能コンポーネントの最新版は、</span><span
+lang=EN-US>Microsoft</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>の</span><span
+lang=EN-US>Universal Data Access WEB</span><span style='font-family:"ＭＳ 明朝"; 
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>サイト</span>
+<span lang=EN-US>(http://www.microsoft.com/japan/developer/data/default.asp)</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>から入手することが可能です。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>今までのバージョンで</span><span
+lang=EN-US>sqora.wri</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>という名前だったファイルは、</span><span
+lang=EN-US>ODBCRelnotes.wri</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>という名前に変更されました。</span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US><o:p></o:p></span></b>
+ </li>
+</ul>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>ODBC 8.1.5.4.0<o:p></o:p></span></b></p> 
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>SQL_GD_BLOCK (SQL_GETDATA_EXTENSIONS) </span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>サポートの追加</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>DSN</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>用レジストリ中に</span><span
+lang=EN-US>Password</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>エントリが可能になり、ユーザーがパスワードを入力するかわりに、ドライバがこのレジストリを読込んでパスワードを取得することができます。これは</span><span
+lang=EN-US>Oracle7 ODBC</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family: 
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>ドライバとの互換のために実装されています。レジストリにパスワードを格納するツールは提供されませんので、ご注意ください。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>SQL_CLOSE</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>や</span><span lang=EN-US>SQL_DROP</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>パラメータが付いた</span><span lang=EN-US>SQLFreeStmt</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>や、</span><span lang=EN-US>SQLCloseCursor</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>や、ステートメント・ハンドルに対する</span><span lang=EN-US>SQLFreeHandle</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>コールで、</span><span lang=EN-US>OCI</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>カーソルを強制クローズするオプションが可能になりました。このオプションのデフォルトでは、上記の状況では</span><span
+lang=EN-US>OCI</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>カーソルを強制クローズしません。</span><span
+lang=EN-US>OCI</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>カーソルを強制クローズするとパフォーマンスに影響しますが、一方で意図的に強制クローズする必要がある場合もありますので、このオプションが追加されました。</span>
+ </li>
+</ul>
+
+<p class=MsoNormal><span lang=EN-US><span style="mso-spacerun:
+yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p> 
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>ODBC 8.1.5.3.0<o:p></o:p></span></b></p> 
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>プロシージャ呼出しからの結果セットを戻すインプリメンテーションが拡張されました。カーソル参照パラメータは、プロシージャ呼出しで省略することが可能です。これは他の</span><span
+lang=EN-US>ODBC</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>の実装と一貫性および互換性を持つようにしたためです。</span>
+ </li>
+</ul>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>機能性</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Oracle ODBC Driver</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>は、</span><span lang=EN-US>Microsoft ODBC</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>バージョン</span><span lang=EN-US>3.52</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>仕様に準拠しています。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>必要なハードウェア</span><span lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Oracle ODBC Driver</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>を使用するには、</span><span lang=EN-US>Windows XP</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>、</span><span lang=EN-US>Windows 2000</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>、</span><span lang=EN-US>Windows NT</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>または</span><span lang=EN-US>Windows 98</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>でサポートされるシステム構成が必要です。次の要件も含まれます。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style="mso-spacerun: yes">&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>最低</span><span lang=EN-US>32MB</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>のシステム・メモリー</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style="mso-spacerun: yes">&nbsp; 
+</span></span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>最低</span><span lang=EN-US>3MB</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>の空きディスク領域</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>必要なソフトウェア</span><span lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Microsoft Windows XP</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>、</span><span lang=EN-US>Windows 2000</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>、</span><span lang=EN-US>Windows NT 4.0</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>または</span><span lang=EN-US>Windows 98</span><span 
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>オペレーティング・システム</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Oracle Net Client R10.1.0.2.0</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Oracle 10.1.0.2.0</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>に付属の</span><span lang=EN-US>Oracle Universal Installer</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>サーバーに必要なソフトウェア</span><span lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Oracle ODBC Driver</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>を介して</span><span lang=EN-US>ODBC</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>対応アプリケーションをサポートするために必要なサーバー・ソフトウェアを次に示します。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style="mso-spacerun: yes">&nbsp;
+</span>Oracle Server 8.1.7</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>以上</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>リリース・ノート</span><span lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class=MsoNormal><span lang=EN-US>1. </span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>インストール後の処理</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Oracle ODBC Driver</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>のデータソースを構成するには、</span><span lang=EN-US>Microsoft ODBC</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>データソース・アドミニストレータを使用します。詳細については、</span><span lang=EN-US>Oracle
+ODBC Driver</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>ヘルプ・ファイルの「データソースを構成する」の項を参照してください。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>2. </span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>新機能</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>詳細については、</span><span lang=EN-US>Oracle
+ODBC Driver</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>ヘルプ・ファイルの新機能の説明を参照してください。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>3. </span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>データ変換</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Oracle ODBC Driver</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>は、</span><span lang=EN-US>REAL</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>データ型と</span><span
+lang=EN-US>DOUBLE</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>データ型の操作および表示について、</span><span
+lang=EN-US>Microsoft ODBC 3.00 SDK</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>（</span><span
+lang=EN-US>Software Development Kit</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>）のガイドラインに準拠しています。</span><span
+lang=EN-US>SQL_DOUBLE</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>と</span><span
+lang=EN-US>SQL_FLOAT</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>の精度（使用できる最大桁数）は</span><span
+lang=EN-US>15</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>桁です。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>DOUBLE</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>型値の精度は、</span><span
+lang=EN-US>Oracle</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>データベースに格納される場合、</span><span
+lang=EN-US>ODBC</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>で現在サポートされている精度よりもはるかに高くなります。その結果、値の精度が失われることになります。次に例を示します。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Oracle</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>のデフォルト精度の</span><span lang=EN-US>FLOAT</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>型で</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>定義された次の数があるとします。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>123.9991029382123</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>この数を</span><span lang=EN-US>Windows</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>プラットフォーム上で変換すると、</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>次のように精度が失われます。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>123.999102938212</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>精度が失われることにより、異なるアプリケーションでは動作が違ってくる場合があります。</span><span
+lang=EN-US>Microsoft Access</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>の場合、ユーザーはデータを更新できなくなります。これは、</span><span
+lang=EN-US>Oracle</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>には</span><span
+lang=EN-US>123.9991029382123 </span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>という値で存在するのに対し、</span><span
+lang=EN-US>Microsoft Access</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>には元の値であるにもかからわず切り捨てられた</span><span
+lang=EN-US>123.99910293821</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>という値で存在するので、</span><span
+lang=EN-US>Microsoft Access</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>はデータが変更されたと認識するためです。</span><span
+lang=EN-US>Microsoft Access</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>が</span><span
+lang=EN-US>123.99910293821</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>という切り捨てられた数を選択条件にすると、</span><span
+lang=EN-US>Oracle</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>データベースには該当する行が存在しないため、行の更新ができません。</span><span
+lang=EN-US>Oracle</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>データベースには、元の値である</span><span
+lang=EN-US>123.9991029382123</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>が格納されている行しかありません。</span></p>
+
+<p class=MsoNormal><span lang=EN-US><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Microsoft Query</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>の場合は不正に表示されます。</span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>たとえば、次のような倍精度の値を表示するとします。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>-1.123400000000000E-001</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Microsoft
+Query</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>では次のように表示されます。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>-1.123400000000000E-00</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Microsoft Query</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>では、</span><span lang=EN-US>SQLColAttributes</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>がコールされ、表示サイズ</span><span lang=EN-US>22</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>が返されます。</span><span lang=EN-US>ODBC SDK</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>で定義されている倍精度データの表示書式は次のとおりです。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>合計長</span><span lang=EN-US>22</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>（符号</span><span lang=EN-US>1</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>、数値</span><span
+lang=EN-US>15</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>、小数点</span><span
+lang=EN-US>1</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>、文字</span><span lang=EN-US>E</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>、符号</span><span lang=EN-US>1</span><span style='font-family:
+"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>、数値</span><span
+lang=EN-US>3</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>）</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>上記の例では、精度に</span><span lang=EN-US>15</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>桁ではなく</span><span lang=EN-US>16</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>桁の数値があるため、合計で</span><span lang=EN-US>23</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>桁の文字列になっています。データが正しく表示されないのはこのためです。</span></p>
+
+<p class=MsoNormal><span lang=EN-US><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>一般的に、</span><span lang=EN-US>ODBC</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>で精度の問題を避けるには、</span><span lang=EN-US>Oracle</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>データベースに格納される</span><span lang=EN-US>DOUBLE</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>データ型の値が『</span><span lang=EN-US>Microsoft ODBC</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>プログラマーズリファレンス</span><span lang=EN-US> &amp; SDK</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>』に記載されている仕様に従っていることを確認します。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>4. SQLDescribeParam</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>SQLDescribeParam</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>が使用可能となっていますが、</span><span lang=EN-US>Oracle</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>データベースは、入力パラメータに関する情報を返すことはサポートしていません。</span><span
+lang=EN-US>ODBC</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>ドライバは入力パラメータに対して以下の値を返します。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US>DataTypePtr<span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>=
+SQL_VARCHAR</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US>ParameterSizePtr<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>=
+999</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US>DecimalDigitsPtr<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>=
+0</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US>NullablePtr<span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>=
+SQL_NULLABLE</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US><span
+style="mso-spacerun: yes">&nbsp;</span>(#556749)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>5.<span style="mso-spacerun: yes">&nbsp;
+</span>Oracle ODBC Driver</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>の既知のソフトウェア問題</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>データベース・サーバーが</span><span
+lang=EN-US>Windows NT</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>上で実行されている場合、</span><span
+lang=EN-US>SQLSetStmtOption</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>の</span><span
+lang=EN-US>SQL_QUERY_TIMEOUT</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>は動作しません。</span>
+ </li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list 36.0pt'><span
+     style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+     mso-hansi-font-family:"Times New Roman"'>Windows NT</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>データベース・サーバー上で行われている文の実行をキャンセルする場合、</span><span lang=EN-US>SQLCancel
+</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>は動作しません。</span>
+ </li>
+</ul>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

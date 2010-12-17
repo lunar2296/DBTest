@@ -1,0 +1,1072 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./ODBCRelnotesUS_files/filelist.xml">
+<title>Oracle ODBC Driver 10</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>akapila</o:LastAuthor>
+  <o:Revision>68</o:Revision>
+  <o:TotalTime>199</o:TotalTime>
+  <o:Created>2002-12-06T19:32:00Z</o:Created>
+  <o:LastSaved>2006-06-15T10:20:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>3181</o:Words>
+  <o:Characters>18134</o:Characters>
+  <o:Company>Oracle Corporation</o:Company>
+  <o:Lines>151</o:Lines>
+  <o:Paragraphs>36</o:Paragraphs>
+  <o:CharactersWithSpaces>22269</o:CharactersWithSpaces>
+  <o:Version>9.4402</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DoNotShowRevisions/>
+  <w:DoNotPrintRevisions/>
+  <w:HyphenationZone>0</w:HyphenationZone>
+  <w:DoNotHyphenateCaps/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>6 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:DoNotShadeFormData/>
+  <w:Compatibility>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:UsePrinterMetrics/>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:AutoSpaceLikeWord95/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:DoNotShowMarkup/>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+@page
+	{mso-footnote-position:end-of-section;}
+div.SECTION1
+	{mso-footnote-position:end-of-section;}
+span.SPELLE
+	{mso-spl-e:yes;}
+span.GRAME
+	{mso-gram-e:yes;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+ /* Page Definitions */
+@page
+	{mso-endnote-position:end-of-section;
+	mso-endnote-numbering-style:arabic;
+	mso-endnote-numbering-start:0;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:812796020;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1829493642 151184264 -2093680998 -133550490 1982214694 1745540302 -1552518020 1002570582 1517054210 -108882834;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1077021319;
+	mso-list-type:hybrid;
+	mso-list-template-ids:240681810 2131530362 -473508056 -1076883184 141177978 -1123666974 -234075172 -1915217414 -92080918 1160040452;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:1460145032;
+	mso-list-type:hybrid;
+	mso-list-template-ids:649262118 -455308710 1030245494 -1403509854 1080045986 -2042729734 2073330194 1411528378 -87767470 -626366702;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="address"></o:smarttagtype><o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="PostalCode"></o:smarttagtype><o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="State"></o:smarttagtype><o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="Street"></o:smarttagtype><o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="country-region"></o:smarttagtype><o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="City"></o:smarttagtype><o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="place"></o:smarttagtype>
+</head>
+
+	
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>&nbsp;</b><b><span style='font-size:12.0pt'>Oracle ODBC Driver 10.2.0.3.0</span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>DESCRIPTION</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The Oracle ODBC Driver enables Microsoft[R]&nbsp; Windows XP
+[R}, Windows 2000 [R], Windows NT[R] and Windows 98 [R] applications that
+implement the Microsoft Open Database Connectivity&nbsp; (ODBC) API to read
+from and write to Oracle databases. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The Oracle ODBC Driver distribution kit consists of Dynamic
+Link Libraries, a Windows help file, a copy of the license and this product
+description.&nbsp; To use an ODBC enabled application the following software is
+required in addition to the Oracle ODBC Driver:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Oracle Net version 10.2.0.0.0</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Network transport on the client.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Oracle Server</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>NEW FEATURES<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 10.2.0.1</b></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in;mso-layout-grid-align:auto;
+     punctuation-wrap:hanging;text-autospace:ideograph-other'>Added support for
+     named parameter, binding parameters by name. Oracle ODBC Driver now allows
+     application to specify the parameters to a stored procedure by name, in
+     the procedure call. Named parameters are only to be used in calls to
+     stored procedures, and not to be used in other SQL statements. (Bug3617324)<span
+     style='font-size:12.0pt'><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in;mso-layout-grid-align:auto;
+     punctuation-wrap:hanging;text-autospace:ideograph-other'>Changed the
+     behavior of describing metadata for stored procedures that exist in some
+     package. The change has been done to increase the performance of ODBC
+     driver for stored procedure calls. Now if the stored procedure is in some
+     package then the metadata will be described using PL/SQL procedure.
+     (Bug4030664)<span style='font-size:12.0pt'><o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 10.1.0.2.0 <o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list .5in'>Added
+     support for NCHAR columns in INSERT/UPDATE statements with parameter
+     markers. (Bug 2827132)&nbsp; Previously the driver did not notice that the
+     column was of NCHAR type and failed to set the proper attribute when
+     binding at the OCI level.&nbsp; As a side effect the SQLDescribeParam call
+     now returns useful information for parameters in INSERT/UPDATE statements,
+     though not in other statement types. </li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list .5in'>Added
+     support for LOBs larger then 4gb.&nbsp; Requires the Oracle Client and
+     Database to both be version Oracle 10g or higher. </li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list .5in'>Added
+     support for new BINARY_FLOAT and BINARY_DOUBLE datatypes in 10g and later
+     servers. </li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list .5in'>Added
+     support for MONTHNAME and DAYNAME functions in SQL statements.</li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in'><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 9.2.0.4.0<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo9;tab-stops:list .5in'>Added
+     ability to register a callback routine to receive notification of
+     connection failover events. </li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo9;tab-stops:list .5in'>Changed
+     the default value of the data source configuration option “Microsoft
+     Transaction Server (MTS) Support” to be disabled.&nbsp; The check box for
+     this option in the data source configuration form will now have a check
+     mark in it by default.&nbsp; Enabling MTS support causes problems in
+     ‘dblinks’ and ‘connection failover’ even if MTS is not used.&nbsp;
+     Changing the default value to disabled will help reduce support calls.&nbsp;
+     This change is not reflected in the online documentation file for the ODBC
+     driver.&nbsp; The documentation will be corrected in the next release.</li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 9.2.0.3.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added data source configuration option to disable SQLDescribeParam
+support. (Bug 2485192)</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Deprecated the RemoveControlChars feature from the oraodbc.ini
+file.&nbsp; The ODBC driver will always strip invalid control characters from
+SQL statements before passing the statement to the Oracle database.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Changed the online help to be HTML based.<b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Changed the default behavior of the driver to always remove invalid
+control characters from SQL statements.&nbsp; Deprecated the RemoveControlChars
+option which was located in the oraodbc.ini file.&nbsp; This option is no
+longer necessary.&nbsp; (Bug2543632)</p>
+
+<p class=MsoNormal style='margin-left:.25in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 9.2.0.2.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Implemented an internal pre-fetch cache to improve the performance of
+fetching data, especially for applications which are fetching one row at a
+time.&nbsp; The size of the cache is a data source configuration option.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Deprecated the 'Pre-Fetch Count' data source configuration option and
+replaced it with the option 'Fetch Buffer Size'.&nbsp; The 'Fetch Buffer Size'
+option is used to specify the size of the internal pre-fetch cache.&nbsp; The
+default is 64,000 bytes.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Extended Unicode support to utilize the Unicode enhancements added in
+Oracle 9.0.1.&nbsp; Unicode SQL strings can now be sent to the database server
+and columns within a table can be defined as containing Unicode data.&nbsp; The
+driver now supports the SQL types SQL_WCHAR, SQL_WVARCHAR and SQL_WLONGVARCHAR.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added the data source configuration option 'Numeric Settings'.&nbsp;
+This option is used to choose which numeric settings will be used in receiving
+and returning numeric data that is bound as strings.&nbsp; This option allows
+the user to choose Oracle NLS settings (the default setting), Microsoft
+regional settings (to provide a way to mirror the Oracle OLE DB driver's
+behavior for greater interoperability) and US numeric settings, which are
+necessary when using MS Access or DAO in non-US environments.&nbsp; (Bug
+2148838 and others)&nbsp; </p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added support for the SQL TIMESTAMP data type.&nbsp; This support is
+only available in Oracle 9.0.1 or higher clients and requires an Oracle 9.0.1
+or higher database.</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 9.0.1.3.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added support for connection syntax
+&quot;&lt;username&gt;/&lt;password&gt; as sysdba&quot; and
+&quot;&lt;username&gt;/&lt;password&gt; as sysoper&quot;.&nbsp; The &quot;as
+sysdba&quot; and &quot;as sysoper&quot; string can also be contained in the
+password field.&nbsp; (Bug 2114033)&nbsp; </p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added support for the statement attribute SQL_ATTR_RETRIEVE_DATA.&nbsp;
+(Bug 2165706)</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 9.0.1.2.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added support for &lt;username&gt;/&lt;password&gt; syntax to be used as
+username to log on. (as requested by Bug 1094170)&nbsp; </p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.1.7.4.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>When connected to an Oracle 8.1.6 or higher database the ODBC driver
+will now return SQL_SVE_CASE in response to a SQLGetInfo call for
+SQL_SQL92_VALUE_EXPRESSIONS.&nbsp; (as requested by bug 1807444).<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added support for fetch and position by BOOKMARK and the
+SQLBulkOperations routine. A side effect of this is that the ADO Recordcount
+property will now return the number of records in the resultset instead of -1.
+(Bug 898817)<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>When the data source configuration option &quot;Force SQL_WCHAR
+Support&quot; is enabled the functions SQLColumns and SQLProcedureColumns will
+now report character columns as being SQL_WCHAR,&nbsp; SQL_WVARCHAR or
+SQL_WLONGVARCHAR.&nbsp; (Bug 1735893)<b><o:p></o:p></b></p>
+
+<p class=MsoNormal><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.1.7.3.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>An option has been added to the configuration screen to allow users to
+change the default value of the SQL_ATTR_METADATA_ID connections and statement
+attribute.&nbsp;&nbsp; It usually defaults to SQL_FALSE.&nbsp; Checking this
+data source option will cause the default to be SQL_TRUE at connection
+time.&nbsp; The implications of these values are listed in the ODBC
+specifications and so will not be repeated here.&nbsp;&nbsp; Calls made by the
+application to specifically change the value of the attribute after connection
+time will be unaffected by this option and will complete their functions as
+expected.&nbsp; This option will be in the Workarounds section of the
+configuration screen with the caption 'Set Metadata Id Default to
+SQL_TRUE'.&nbsp; (as requested by bug1671529)<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>An option has been added to the configuration screen to allow users to
+turn on support for SQLGetData extensions SQL_GD_ANY_COLUMN, SQL_GD_ANY_ORDER
+and SQL_GD_BOUND.&nbsp; (SQL_GD_BLOCK is always supported.)&nbsp; Turning on
+this option will of necessity implicitly turn on the Force Retrieval of Longs
+option, even if the Force Retrieval of Longs option is not selected in the
+configuration screen.&nbsp; This means that all behavior associated with the
+Force Retrieval of Longs option will also apply to the SQLGetData extensions
+option.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.1.7.2.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The ODBC installation now supports multiple Oracle homes.&nbsp; Each
+installation of the ODBC driver will be uniquely identified by the name of the
+Oracle home which it is installed under.&nbsp; For example, if the name of the
+Oracle home is &quot;OraHome81&quot; the ODBC driver will installed as
+&quot;Oracle in OraHome81&quot;.&nbsp; The Oracle ODBC driver use to always be
+installed as &quot;Oracle ODBC Driver&quot;.&nbsp; This list of installed ODBC
+drivers can be viewed from the ODBC Administrator utility under the
+&quot;Drivers&quot; tab.&nbsp; <b><o:p></o:p></b></p>
+
+<p class=MsoNormal><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in'>When an existing Oracle 8.1.7 home
+is upgraded to the ODBC 8.1.7.2.0 driver the installation will convert existing
+data source definitions for the &quot;Oracle ODBC Driver&quot; to the name of
+the newly installed driver.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added support for SQL_ATTR_METADATA_ID attribute (Bug 1373064).&nbsp;
+This attribute is an ODBC 3.0 feature which is used to specify case sensitivity
+on arguments of the ODBC catalog functions.&nbsp; For example, if
+SQL_ATTR_METADATA_ID is set to SQL_TRUE then the case of the TableName argument
+of the function SQLTables is not significant.&nbsp; The default value, as
+defined by the Microsoft ODBC specification, is SQL_FALSE (case
+sensitive).&nbsp; <b><o:p></o:p></b></p>
+
+<p class=MsoNormal><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in'>Prior to supporting
+SQL_ATTR_METADATA_ID all arguments to catalog functions were treated as case
+insensitive unless they were contained in double quotes.&nbsp; Existing applications
+may need to be revised if they are passing case sensitive arguments for objects
+which are stored in the database as case insensitive.&nbsp; For example, the
+call &quot;{call proc1(?)}&quot; use to succeed if 'proc1' was stored in the
+database as 'PROC1'.&nbsp; Now that same call will succeed if the procedure
+name is stored in the database as 'proc1' or if the SQL_ATTR_METADATA_ID is set
+to SQL_TRUE.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Changed the SQLGetInfo return value of SQL_DBMS_NAME to be
+&quot;Oracle&quot;.&nbsp; The value returned use to be
+&quot;Oracle8&quot;.&nbsp; (Bug 1494101)<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added a &quot;Test Connection&quot; button to the ODBC data source
+configuration screen.&nbsp; This feature obsoletes the ODBC Test Utility which
+has been shipping with the ODBC driver.&nbsp; The ODBC Test Utility has been
+removed from the ODBC installation.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.1.7.1.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Reorganized the ODBC data source configuration interface.&nbsp;
+Integrated TNS name selection with the tnsname.ora located on the system.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added support for Microsoft EXEC syntax.&nbsp; A procedure (or function)
+call specified in an EXEC statement will be translated to its equivalent Oracle
+procedure (or function) call before being processed by the Oracle8 database
+server if this feature is enabled. <b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added a data source configuration option to enable/disable support of
+Microsoft EXEC syntax.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added a data source configuration option for Batch Autocommit
+Mode.&nbsp; The default behavior for the Oracle8 ODBC driver is to rollback a
+transaction if there was an error on one or more rows.&nbsp; The default
+behavior for the Oracle7 ODBC driver is to commit the transaction up to the row
+an error was encountered.&nbsp; This option was added to be able to configure
+an data source to be compatible with the Oracle7 ODBC driver.&nbsp; An
+additional option was added, which is only available in Oracle8i clients, which
+will commit all rows that did not have an error.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added a data source configuration option to force SQLDescribeCol to
+return a data type of SQL_WCHAR for SQL_CHAR columns, SQL_WVARCHAR for
+SQL_VARCHAR columns, and SQL_WLONGVARCHAR for SQL_LONGVARCHAR columns.&nbsp;
+Enabling this option allows <st1:city><st1:place>ADO</st1:place> </st1:city>applications
+to use Unicode. &nbsp;<st1:city><st1:place>ADO</st1:place> </st1:city>relies on
+the return value of SQLDescribeCol to determine how to bind the result
+column.&nbsp; Currently the Oracle ODBC driver would never return a data type
+of 'SQL_W' because the database does not support defining columns as type
+Unicode.&nbsp; By default Force WCHAR Support is disabled.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Improved the performance of the catalog functions SQLColumns,
+SQLPrimaryKeys and SQLTablePrivileges.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.1.5.5.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The Microsoft ODBC compliance level of the Oracle8 ODBC driver is now
+3.51.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The Oracle8 ODBC driver now supports Unicode.&nbsp; Unicode support is
+dependent on the Unicode features available through the Oracle Call Interface (OCI).&nbsp;
+OCI 8.1.5 supports inputting Unicode data into a database through
+SQLBindParameter and retrieving Unicode data from a database through SQLBindCol
+or SQLGetData.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added a data source configuration option to disable Microsoft Transaction
+Server (MTS) support.&nbsp; By default MTS support is enabled.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>When a user attempts to connect to the database with an expired
+password, the driver will prompt the user to change the password and then will
+connect the user to the database when the password has been changed.&nbsp; If
+the user tries to connect using SQLDriverConnect with a SQL_DRIVER_NOPROMPT
+parameter, the driver will not prompt for the password change but will simply
+fail out of the connect attempt with an error indicating that the password has
+expired.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The Microsoft Redistributable components for ODBC have been removed from
+the installation.&nbsp; These components are installed as part of the operating
+system.&nbsp; The latest versions of these components are often installed by Microsoft
+products or are available from their Universal Data Access web site
+(http://www.microsoft.com/data/).<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The file sqora.wri has been renamed to ODBCRelnotes.wri.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.1.5.4.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Microsoft Transaction Server (MTS) support is dependent on the ORAMTS
+Patch 8.1.5.0.1.&nbsp; ODBC support for the ORAMTS patch had previously been
+made available with the ODBC 8.1.5.3a.0 patch kit.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Added support for SQL_GD_BLOCK (SQL_GETDATA_EXTENSIONS).</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>A registry entry (Password) may now be set in the registry for a DSN and
+will be read by the driver to obtain a password for a connection instead of
+prompting the user for the password.&nbsp; This was implemented to be
+compatible with the Oracle7 ODBC driver.&nbsp; Note that we do not provide any
+tools to store passwords in the registry.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The option of forcing OCI cursors to close upon a call to SQLFreeStmt
+with a SQL_CLOSE or SQL_DROP parameter, a call to SQLCloseCursor, or a call to
+SQLFreeHandle on a statement handle is now available to the user.&nbsp; The
+default of this option will not force the OCI cursors to close under the above
+circumstances.&nbsp; This option was added because in some cases it is
+desirable to forcibly close OCI cursors under these circumstances, but to do so
+when it is not specifically desired can cause an unnecessary performance
+hit.&nbsp;&nbsp; </p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp; <b><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.1.5.3.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Enhanced our implementation of returning result sets from procedure
+calls.&nbsp; The refcursor parameters can be omitted from the procedure
+call.&nbsp; This was done to be consistent and compatible with other ODBC
+implementations.</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.1.5.0.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Microsoft Transaction Server (MTS) Support.&nbsp; Requires a minimum of
+an Oracle 8.1.5 client.</p>
+
+<p class=MsoNormal><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ODBC 8.0.5.5.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Support for scrollable and updateable cursors.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.0.5.4.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>SQL_C_NUMERIC data type</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.0.5.3.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Option to enable/disable support of SQL_ATTR_QUERY_TIMEOUT</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.0.5.1.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>LOB Support (requires minimum of Oracle 8.0.5 client)</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Connection Pooling</p>
+
+<p class=MsoNormal style='margin-left:.25in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.0.5<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Returning result sets from procedure calls.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ODBC driver supports connection failover capabilities provided by
+Failsafe and Parallel Server.</p>
+
+<p class=MsoNormal style='margin-left:.25in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.0.4.0.2<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>SQLDescribeParam Support</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>SQLBrowseConnect Support</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>ODBC 8.0.4.0.0<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ODBC 3.0 Compliant</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>TESTING MATRIX</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The following table summarizes the testing configurations
+that an ODBC release was certified with.&nbsp; This table is intended to give an
+indication of what environments the ODBC driver is know to work in.&nbsp; The
+table is not meant to be a complete list of all supported environments.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>ODBC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Database&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Operating&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3rd Party<o:p></o:p></b></p>
+
+<p class=MsoNormal><b>Version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Versions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+style="mso-spacerun: yes">  
+</span>Systems&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MDAC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Products<o:p></o:p></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>10.2.0.3.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10.2.0.3.0<span
+style="mso-spacerun: yes">         </span>Windows XP SP2&nbsp;<span
+style="mso-spacerun: yes"> 
+</span>2.70.9001.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MSOffice XP</p>
+
+<p class=MsoNormal><span style="mso-spacerun: yes">                     
+</span>10.2.0.2.0<span style="mso-spacerun:
+yes">                                                                   
+</span><span style="mso-spacerun: yes">   </span>MSOffice 2000</p>
+
+<p class=MsoNormal><span style="mso-spacerun: yes">                     
+</span>10.2.0.1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+style="mso-spacerun:
+yes">                                                              
+</span>Visual Basic 6.0</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+10.1.0.2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9.2.0.2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p class=MsoNormal><span style="mso-spacerun: yes">                     
+</span>9.0.1.4.0</p>
+
+<p class=MsoNormal>10.2.0.2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+10.2.0.1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Windows XP SP2&nbsp;&nbsp;
+2.70.9001.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MSOffice XP</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+10.1.0.2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MSOffice 2000</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9.2.0.2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Visual Basic 6.0</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9.0.1.4.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p class=MsoNormal>10.2.0.1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+10.2.0.1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Windows XP SP2&nbsp;&nbsp;
+2.70.9001.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MSOffice XP </p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+10.1.0.2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MSOffice 2000</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9.2.0.2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Visual Basic 6.0</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9.0.1.4.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p class=MsoNormal>10.1.0.2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+10.1.0.2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Windows XP SP2&nbsp;&nbsp;
+2.70.9001.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MSOffice XP </p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9.2.0.2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MSOffice 2000</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9.0.1.4.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Visual Basic 6.0</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>&nbsp;<o:p></o:p></b></p>
+
+<p class=MsoNormal><b>FUNCTIONALITY</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The Oracle ODBC Driver complies with Version 3.52 of the
+Microsoft ODBC specification.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>SOFTWARE SUPPORT<o:p></o:p></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>If you would like to receive Oracle Support for your Oracle
+ODBC Driver, please call (650) 506-5578 in the <st1:country-region><st1:place>US</st1:place>
+</st1:country-region>, or contact your local Oracle Sales office. Please note
+that Oracle will not provide support for the Oracle ODBC Driver unless a
+support contract is in place.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>HARDWARE REQUIRED<o:p></o:p></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The Oracle ODBC Driver requires a system configuration supported
+by Windows XP, Windows 2000, Windows NT or Windows 98 including:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; A minimum of 32 MB system memory</p>
+
+<p class=MsoNormal>&nbsp; A minimum of 3 MB free disk space</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>SOFTWARE REQUIRED<o:p></o:p></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Microsoft Windows XP, Windows 2000, Windows NT 4.0 or
+Windows 98 operating system.</p>
+
+<p class=MsoNormal>Oracle Net Client 10.2.0.0.0</p>
+
+<p class=MsoNormal>Oracle Universal Installer shipping with Oracle 10.2.0.0.0</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>SERVER SOFTWARE REQUIREMENTS<o:p></o:p></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This section lists the server software required to support
+ODBC enabled applications through the Oracle ODBC Driver.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; Oracle Server 8.1.7 or higher</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>RELEASE NOTES<o:p></o:p></b></p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p class=MsoNormal><b>1. Post-Installation</b> </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Use the Microsoft(R) ODBC Administrator to configure your
+Oracle ODBC Driver data sources. Refer to the Oracle ODBC driver help file
+section entitled Configuring the Data Source.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>2. New Features</b> </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Refer to the Oracle ODBC Driver help file section entitled
+New Features.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>3. Data Conversions<o:p></o:p></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The Oracle ODBC Driver follows the Microsoft(R) ODBC 3.00 Software
+Development Kit (SDK) guidelines for manipulating and displaying real and
+double data types. Precision (the maximum number of digits used) of SQL_DOUBLE
+and SQL_FLOAT is 15.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>If double values are stored in a Oracle database precision
+for these data types can be much greater than what ODBC currently supports. The
+end result will be the loss of precision. For Example:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+A float data type defined in Oracle with the default precision contains a
+number such as:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+123.9991029382123</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+When converted on the Windows Platform the number will drop precision to</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+123.999102938212</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This loss of precision may have different behavior for
+different applications. For Microsoft Access(R), the user is not allowed to
+update the data. Microsoft Access(R) thinks the data has changed, because
+Oracle has the value 123.9991029382123 and Microsoft Access(R) now has the
+original but truncated number 123.99910293821. Microsoft Access(R) cannot
+update the row using the 123.99910293821 truncated number as a selection
+criteria since that row does not exist in the Oracle database.&nbsp; Only the
+original row with 123.9991029382123 exists in the Oracle database.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In Microsoft Query(R) the display will be incorrect. Lets
+take for example the following double precision number to display:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-1.123400000000000E-001</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+with Microsoft Query(R) the number is displayed as</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-1.123400000000000E-00</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Microsoft Query(R) makes a call to SQLColAttributes
+returning the display size of 22. The format defined in the ODBC SDK for
+display of a double precision data is the following:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Total 22 Length</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(a sign,15 digits,a decimal point,the letter E,a sign and 3 digits)</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Our example contains a total string length of 23 with 16
+digits instead of the 15 digits for precision. This is why the data is
+displayed wrong. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In general to avoid precision problems using ODBC, ensure
+that data stored in the Oracle database for a double data type conform to the
+specifications described in the Microsoft ODBC Programmer's Reference and SDK
+Guide. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>4. Known Software Problems for Oracle ODBC Driver<o:p></o:p></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The SQLSetStmtOption SQL_QUERY_TIMEOUT does not work if the database
+server is running on Windows NT.</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font-stretch: normal;font-size-adjust: none'></span></span><span
+style='font-size:7.0pt;font-family:Symbol'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>SQLCancel does not work if you are canceling a statement that is
+executing on Windows NT database server.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>****************************************************************************</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>For More Information</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Contact your Oracle Sales Representative, your Oracle Sales
+Office, or call 1-800-ORACLE1.&nbsp; Outside of the United States please call
+650-506-5701. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Copyright Oracle Corporation 2003. All Rights
+Reserved.&nbsp; Printed in the <st1:country-region><st1:place>U.S.A.</st1:place>
+</st1:country-region>&nbsp; This document is provided for informational
+purposes only.&nbsp; No contract is implied or allowed.&nbsp; Oracle is a
+registered trademark.&nbsp; Oracle9 and Oracle Net9 are trademarks of
+Oracle.&nbsp; Microsoft, Microsoft Access, Microsoft Query, MS, Windows XP,
+Windows NT, Windows 2000 and Windows 98 are trademarks of Microsoft
+Corporation.&nbsp; PowerBuilder is a registered trademark of Sybase Inc. All
+other company and product names mentioned are used for identification purposes
+only, and may be trademarks of their respective owners.&nbsp; Oracle
+Corporation World Headquarters is located at <st1:address><st1:street>500
+Oracle Parkway</st1:street>, <st1:city>Redwood Shores</st1:city>, <st1:state>CA</st1:state>
+&nbsp;<st1:postalcode>94065</st1:postalcode> <st1:country-region>U.S.A.</st1:country-region></st1:address></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
