@@ -49,12 +49,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Documents and Settings\sw\My Documents\Visual Studio 2010\Projects\otl_test\instantclient-sdk-win32-10.2.0.5\instantclient_10_2\sdk\include;C:\Documents and Settings\sw\My Documents\Visual Studio 2010\Projects\otl_test\otl_test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\instantclient-sdk-win32-10.2.0.5\instantclient_10_2\sdk\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Documents and Settings\sw\My Documents\Visual Studio 2010\Projects\otl_test\instantclient-sdk-win32-10.2.0.5\instantclient_10_2\sdk\lib\msvc;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\instantclient-sdk-win32-10.2.0.5\instantclient_10_2\sdk\lib\msvc;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>oci.lib;ociw32.lib;oraocci10.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -81,6 +81,7 @@
   <ItemGroup>
     <ClInclude Include="CommonUtil.h" />
     <ClInclude Include="DataBaseConfig.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="otlv4.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
